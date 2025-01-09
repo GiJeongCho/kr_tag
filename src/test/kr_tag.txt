@@ -1,0 +1,95 @@
+kr_tag
+
+
+==fast.api==
+pip install uvicorn
+pip install fastapi
+
+cd ./src
+pyenv activate kr_tag
+uvicorn api:app --host 0.0.0.0 --port 30001 --reload
+
+
+http://121.78.147.172:30001/v1/kr-tag/docs | api docs(지우기)
+
+nohup uvicorn api:app --host 121.78.147.172 --port 30001 &
+tail -f nohup.out
+
+pyenv activate kr_tag
+cd /data/edutem/ASE/develop-ela-server/kr_tag/src
+uvicorn api:app --host 0.0.0.0 --port 30001 --reload
+
+http://121.78.147.172:30001/v1/kr-tag/docs | api docs(지우기)
+==git==
+
+cd /data/edutem/ASE/develop-ela-server/kr_tag
+
+git init  # Git 저장소 초기화
+git remote add origin https://github.com/edutem-web/<원격 저장소>.git  # 새로운 원격 저장소 추가
+git remote add origin https://github.com/edutem-web/kr_tag.git 
+
+
+git status
+git add .
+git commit -m "✅logic 개선" | 변경 사항 커밋 
+
+git branch master
+
+git checkout <브랜치명> | 브랜치로 이동
+git remote -v | 현재 git 폴더와 연결된 원격 레포지토리 확인
+
+git remote set-url origin https://github.com/edutem-web/kr_tag.git  | 필요시 set-url
+
+git push origin master 
+
+==docker ==
+
+======= 의존성 패키지들 =======
+cd /data/edutem/ASE/develop-ela-server/kr_tag | docker 프로젝트 경로
+
+ps -ef |grep 30001 | 포트 남은 번호 찾기
+ps aux | grep python | grep  | awk '{print $2}' | xargs kill
+
+cd /data/edutem/ASE/develop-ela-server/kr_tag
+touch README.md | README파일 생성.
+
+pyenv activate kr_tag
+pip install poetry | 가상환경에 ptetry설치
+poetry init | 포이트리 처음 1회 실행 => toml파일 생성
+poetry install --no-root | lock파일 생성, --no-root 옵션은 프로젝트를 패키지화 하지 않음.
+poetry add <패키지명>@latest | 채신버젼 패키지 설정(lock)
+poetry add fastapi@latest
+poetry add uvicorn@latest
+poetry add kiwipiepy@latest
+poetry add openai==0.28.0
+
+poetry lock --no-update
+
+
+===docker ==
+docker build -t registry.elasolution.com/kr_tag:v0.2.0 -f Dockerfile .
+
+docker run -d -p 30001:80 --restart always --name kr_tag_container registry.elasolution.com/kr_tag:v0.2.0
+
+docker logs -f kr_tag_container
+docker rm -f kr_tag_container
+docker rmi -f registry.elasolution.com/kr_tag:v0.2.0 
+
+== 레지스트리 올리기 == 
+docker push registry.elasolution.com/kr_tag:v0.2.0 
+
+
+======= streamlit 페이지 ==========
+cd /data/edutem/ASE/develop-ela-server/kr_tag
+
+streamlit run app.py --server.address 121.78.147.172 --server.port 30002 --server.fileWatcherType none
+nohup streamlit run app.py --server.address 121.78.147.172 --server.port 30002 --server.fileWatcherType none &
+tail -f nohup.out
+====================================임시=====================================
+docker run -d -p 30001:80 --name kr_tag_container registry.elasolution.com/kr_tag:v0.2.0
+streamlit run app.py --server.address 121.78.147.172 --server.port 30001
+
+streamlit run app.py --server.address 121.78.147.172 --server.port 30002 --server.fileWatcherType none
+
++ 코드 포트 바꾸기
+

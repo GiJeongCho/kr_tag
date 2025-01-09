@@ -1,0 +1,44 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://121.78.147.172:30002
+
+2024-10-16 00:33:22.722 Serialization of dataframe to Arrow table was unsuccessful due to: ('cannot mix struct and non-struct, non-null values', 'Conversion failed for column 0 with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2024-10-16 00:33:31.826 Serialization of dataframe to Arrow table was unsuccessful due to: ('cannot mix struct and non-struct, non-null values', 'Conversion failed for column 0 with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2024-10-16 00:33:39.606 Serialization of dataframe to Arrow table was unsuccessful due to: ('cannot mix struct and non-struct, non-null values', 'Conversion failed for column 0 with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2024-10-16 00:33:45.233 Serialization of dataframe to Arrow table was unsuccessful due to: ('cannot mix struct and non-struct, non-null values', 'Conversion failed for column 0 with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2024-10-16 00:33:56.821 Serialization of dataframe to Arrow table was unsuccessful due to: ('cannot mix struct and non-struct, non-null values', 'Conversion failed for column 0 with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://121.78.147.172:30002
+
+2024-11-06 05:47:40.903 Session with id fe98cfee-7dff-4d6f-9449-c54f269bf341 is already connected! Connecting to a new session.
+2024-11-06 05:55:05.540 Session with id fe98cfee-7dff-4d6f-9449-c54f269bf341 is already connected! Connecting to a new session.
+2024-11-06 05:55:14.340 Session with id fe98cfee-7dff-4d6f-9449-c54f269bf341 is already connected! Connecting to a new session.
+2024-11-07 07:15:40.821 Session with id 2044a355-457e-4205-a76b-53fc8f35f85f is already connected! Connecting to a new session.
+  Stopping...
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://121.78.147.172:30002
+
+2024-11-30 10:29:45.537 Session with id 4942bb77-3da7-4e9e-bdad-32596cbbfdcc is already connected! Connecting to a new session.
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://121.78.147.172:30002
+
+  Stopping...
